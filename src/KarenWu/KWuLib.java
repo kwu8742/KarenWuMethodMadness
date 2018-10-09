@@ -39,16 +39,16 @@ public class KWuLib {
         int two = 5 * num * num - 4;
         int output = (int)Math.sqrt(one);
         int output2 = (int)Math.sqrt(two);
-        boolean equation = (output * output == one) || (output2 * output2 == two);       //Using the rule that either 5n^2+4 or 5n^2-4 is a perfect square then n is a fibonacci number, n being the num
-        return equation;
+        boolean fib = (output * output == one) || (output2 * output2 == two);       //Using the rule that either 5n^2+4 or 5n^2-4 is a perfect square then n is a fibonacci number, n being the num
+        return fib;
     }
 
     public static String dateStr (String str) {
         String month = str.substring(0,2);                      //separate the date into month, day, and year and excluding the slashes
         String day = str.substring(3,5);
         String year = str.substring(6,10);
-        String out = day + "-" + month + "-" + year;         //put the strings back together with the dashes and day and month switched
-        return out;
+        String date = day + "-" + month + "-" + year;         //put the strings back together with the dashes and day and month switched
+        return date;
     }
 
     public static boolean isPalindrome (String word)
